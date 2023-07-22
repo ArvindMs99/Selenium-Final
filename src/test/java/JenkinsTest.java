@@ -18,6 +18,7 @@ public class JenkinsTest{
     public void TitleTest() throws InterruptedException {
         ChromeOptions options = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
+        options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
         driver.manage().window().setSize(new Dimension(1440,900));//full screen
