@@ -13,7 +13,7 @@ pipeline {
         }
         stage('TEST') {
             steps {
-                bat 'locust'
+                bat 'mvn test -Dtest="JenkinsTest"'
                 echo 'TESTED'
             }
         }
